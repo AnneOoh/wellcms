@@ -377,6 +377,9 @@ switch ($action) {
                     $tag_json = $len ? xn_substr($tag_json, 0, $len) . '}' : '';
                 }
             }
+            
+            // hook admin_content_create_post_tag_json_before.php
+            
             $tag_json && FALSE === well_thread_update($tid, array('tag' => $tag_json)) and message(-1, lang('update_thread_failed'));
 
             // 首页flag
@@ -718,6 +721,8 @@ switch ($action) {
                     $tag_json = $len ? xn_substr($tag_json, 0, $len) . '}' : '';
                 }
             }
+            
+            // hook admin_content_update_post_tag_json_before.php
 
             $tag_json != $thread['tag'] and $arr['tag'] = $tag_json;
 
