@@ -7,6 +7,8 @@
 
 // hook index_start.php
 
+'index' == param(0) && empty(param(1)) and http_location(url_prefix());
+
 $arrlist = array();
 $extra = array(); // 插件预留
 $fid = 0;
