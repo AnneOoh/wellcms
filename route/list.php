@@ -5,9 +5,6 @@
 !defined('DEBUG') and exit('Access Denied.');
 
 // hook list_start.php
-
-empty($action) and http_location(url(param(0).'-list'), '', FALSE);
-
 empty(param(1)) and http_location(url_prefix());
 
 $fid = param(1, 0);
