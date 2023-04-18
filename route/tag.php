@@ -6,6 +6,7 @@
 
 $action = param(1);
 
+empty($action) and http_location(url(param(0).'-list'), '', FALSE);
 // hook tag_start.php
 
 switch ($action) {
