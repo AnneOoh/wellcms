@@ -4,8 +4,8 @@
 */
 !defined('DEBUG') and exit('Access Denied.');
 
+empty(param(1)) and http_location(url(param(0)));
 // hook list_start.php
-empty(param(1)) and http_location(url_prefix());
 
 $fid = param(1, 0);
 empty($fid) and message(1, lang('data_malformation'));
